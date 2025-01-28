@@ -1,5 +1,3 @@
-package dubanpulidoexamen;
-
 import java.util.Scanner;
 
 public class UtilidadesExamen {
@@ -48,8 +46,8 @@ public class UtilidadesExamen {
 
     public static int[] encontrarExtremos(int[] valores) {
 
-        int numMayor = 0;
-        int numMenor = 0;
+        int numMayor = Integer.MIN_VALUE;
+        int numMenor = Integer.MAX_VALUE;
         for (int i = 0; i < valores.length; i++) {
             if (valores[i] > numMayor) {
                 numMayor = valores[i];
@@ -66,4 +64,24 @@ public class UtilidadesExamen {
         return valoresMaximosMinimos;
     }
 
+    public static int[] filtrarMayoresQueElPromedio(int[] valores, double promedio) {
+        int contador = 0;
+        for (int numero : valores) {
+            if (numero > promedio) {
+                contador++;
+            }
+
+        }
+
+        int[] mayoresPromedio = new int[contador];
+
+        int posicionArray = 0;
+        for (int numero : valores) {
+            if (numero > promedio) {
+                mayoresPromedio[posicionArray++] = numero;
+                // posicionArray++;
+            }
+        }
+        return mayoresPromedio;
+    }
 }

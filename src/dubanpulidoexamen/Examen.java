@@ -1,5 +1,3 @@
-package dubanpulidoexamen;
-
 public class Examen {
 
     public static void main(String[] args) {
@@ -17,7 +15,15 @@ public class Examen {
         // Encontrar el numero minimo y el numero maximo
         int[] valoresMaximosMinimos = UtilidadesExamen.encontrarExtremos(numeros);
         System.out.println("El valor maximo es: " + valoresMaximosMinimos[0] + ", y el valor minimo es: "
+
                 + valoresMaximosMinimos[1]);
+
+        // Mayores que el promedio.
+        int[] valoresMayoresQuePromedio = UtilidadesExamen.filtrarMayoresQueElPromedio(numeros, promedio);
+        System.out.println("Los numeros mayores que el promedio son: " + valoresMayoresQuePromedio[0]
+                + valoresMayoresQuePromedio[1]);
+
+        
     }
 
 }
