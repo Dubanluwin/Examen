@@ -19,11 +19,9 @@ public class Examen {
                 + valoresMaximosMinimos[1]);
 
         // Mayores que el promedio.
-        int[] valoresMayoresQuePromedio = UtilidadesExamen.filtrarMayoresQueElPromedio(numeros, promedio);
-        System.out.println("Los numeros mayores que el promedio son: " + valoresMayoresQuePromedio[0]
-                + valoresMayoresQuePromedio[1]);
+        int[] mayoresQuePromedio = UtilidadesExamen.filtrarMayoresQueElPromedio(numeros, promedio);
+        UtilidadesExamen.mostrarArray(mayoresQuePromedio);
 
-        
     }
 
 }
